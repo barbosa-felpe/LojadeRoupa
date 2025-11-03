@@ -1,0 +1,172 @@
+.radley-regular {
+    font-family: "Radley", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .radley-regular-italic {
+    font-family: "Radley", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .averia-libre-light {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .averia-libre-regular {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .averia-libre-bold {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .averia-libre-light-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .averia-libre-regular-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .averia-libre-bold-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+*{
+  font-family: "Figtree", sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+nav{
+  background-color: aquamarine;
+  height: 100px;
+
+  display: flex;
+  justify-content: space-between;
+
+
+  align-items: center;
+  
+  margin: 0;
+  padding: 0 50px;
+}
+
+#login-nav{
+    gap: 20px;
+    display: flex;
+    align-items: center;   
+}
+
+#login-nav a{
+  text-decoration: none;
+  color: black;
+}
+
+#login-nav a:hover{
+  cursor: pointer;
+  color: rgb(9, 202, 138);
+}
+
+#nav-ctg{
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#nav-ctg ul{
+  display: flex;
+  gap: 20px;
+}
+
+#nav-ctg li{
+  color: white;
+  list-style: none;
+}
+
+#nav-ctg li:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Container geral com degradê */
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* centraliza o conteúdo se for menor que a tela */
+}
+
+/* Linha de produtos */
+#produto-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 50px;
+  padding: 50px 60px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+#produto-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cada card */
+.produto-card {
+  flex: 0 0 auto;
+  width: 400px;
+  height: 450px;
+  background: grey;
+  border-radius: 15px;
+  scroll-snap-align: start;
+}
+
+/* Degradê nas bordas */
+.slider-wrapper::before,
+.slider-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+
+.slider-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+
+/* 💡 Centraliza se só houver UM card */
+#produto-row:has(.produto-card:first-child:last-child) {
+  justify-content: center;
+}
+
+
