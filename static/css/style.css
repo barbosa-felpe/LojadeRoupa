@@ -1,61 +1,62 @@
 .radley-regular {
-    font-family: "Radley", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .radley-regular-italic {
-    font-family: "Radley", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
+  font-family: "Radley", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  .averia-libre-light {
-    font-family: "Averia Libre", system-ui;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .averia-libre-regular {
-    font-family: "Averia Libre", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .averia-libre-bold {
-    font-family: "Averia Libre", system-ui;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .averia-libre-light-italic {
-    font-family: "Averia Libre", system-ui;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .averia-libre-regular-italic {
-    font-family: "Averia Libre", system-ui;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .averia-libre-bold-italic {
-    font-family: "Averia Libre", system-ui;
-    font-weight: 700;
-    font-style: italic;
-  }
+.radley-regular-italic {
+  font-family: "Radley", serif;
+  font-weight: 400;
+  font-style: italic;
+}
 
-*{
+.averia-libre-light {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.averia-libre-regular {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.averia-libre-bold {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.averia-libre-light-italic {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.averia-libre-regular-italic {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.averia-libre-bold-italic {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 700;
+  font-style: italic;
+}
+
+* {
   font-family: "Figtree", sans-serif;
 }
 
-body{
+body {
+  position: relative;
   margin: 0;
   padding: 0;
 }
 
-nav{
+nav {
   background-color: aquamarine;
   height: 100px;
 
@@ -64,28 +65,28 @@ nav{
 
 
   align-items: center;
-  
+
   margin: 0;
   padding: 0 50px;
 }
 
-#login-nav{
-    gap: 20px;
-    display: flex;
-    align-items: center;   
+#login-nav {
+  gap: 20px;
+  display: flex;
+  align-items: center;
 }
 
-#login-nav a{
+#login-nav a {
   text-decoration: none;
   color: black;
 }
 
-#login-nav a:hover{
+#login-nav a:hover {
   cursor: pointer;
   color: rgb(9, 202, 138);
 }
 
-#nav-ctg{
+#nav-ctg {
   height: 50px;
   background-color: black;
   display: flex;
@@ -94,79 +95,212 @@ nav{
 
 }
 
-#nav-ctg ul{
+#nav-ctg ul {
+  padding: 0;
+  margin: 0;
   display: flex;
   gap: 20px;
 }
 
-#nav-ctg li{
+#nav-ctg li {
   color: white;
   list-style: none;
 }
 
-#nav-ctg li:hover{
+#nav-ctg li:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-/* Container geral com degradê */
+
+
 .slider-wrapper {
   position: relative;
   width: 100%;
   overflow: hidden;
   display: flex;
-  justify-content: center; /* centraliza o conteúdo se for menor que a tela */
+  align-items: center;
 }
 
-/* Linha de produtos */
+/* --- Linha dos produtos --- */
 #produto-row {
   display: flex;
-  flex-wrap: nowrap;
   overflow-x: auto;
+  scroll-behavior: smooth;
   gap: 50px;
   padding: 50px 60px;
-  scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
+
 #produto-row::-webkit-scrollbar {
   display: none;
 }
 
-/* Cada card */
+/* --- Cards --- */
 .produto-card {
   flex: 0 0 auto;
   width: 400px;
   height: 450px;
   background: grey;
   border-radius: 15px;
-  scroll-snap-align: start;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Degradê nas bordas */
+/* --- Degradês laterais --- */
 .slider-wrapper::before,
 .slider-wrapper::after {
   content: "";
   position: absolute;
   top: 0;
-  width: 80px;
+  width: 100px;
   height: 100%;
-  z-index: 2;
+  z-index: 1;
   pointer-events: none;
 }
 
 .slider-wrapper::before {
   left: 0;
-  background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  background: linear-gradient(to right, rgb(255, 255, 255), rgba(20, 20, 20, 0));
 }
 
 .slider-wrapper::after {
   right: 0;
-  background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  background: linear-gradient(to left, rgb(255, 255, 255), rgba(20, 20, 20, 0));
 }
 
-/* 💡 Centraliza se só houver UM card */
-#produto-row:has(.produto-card:first-child:last-child) {
+/* --- Botões laterais --- */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+
+  border: none;
+  color: rgb(0, 0, 0);
+
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 10px 18px;
+
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  color: rgb(156, 156, 156);
+}
+
+.arrow.left {
+  left: 15px;
+}
+
+.arrow.right {
+  right: 15px;
+}
+
+.titulo-cont {
+  margin-left: 10px;
+  padding: 50px;
+}
+
+.swiper {
+      width: 1790px;
+      height: 450px;
+      display: flex;
+      
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+footer{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: aquamarine;
+  height: 400px;
+  
+  
+}
+
+.container-foot{
+  display: flex;
+  
+}
+
+.linha{
+  display: flex;
+  gap: 50px;
+}
+
+.coluna h1{
+  font-weight: bold;
+  font-size: 15pt;
+  width: 300px;
+}
+
+.coluna li{
+  list-style: none;
+  
+  color: black;
+  
 }
 
 
+
+.coluna a{
+  text-decoration: none;
+}
+
+.coluna a li:hover{
+  color: #646464;
+}
+
+.coluna ul{
+  margin: 0;
+  padding: 0;
+  
+}
+
+#rs-container{
+  display: flex;
+  gap: 10px;
+  padding: 10px 0 20px 0px;
+  
+}
+
+#rs-container svg{
+  width: 50px;
+  height: 50px;
+}
+
+#fdp-container svg{
+  width: 70px;
+  height: 70px;
+}
+
+#foot-info{
+  display: flex;
+  margin-top: 70px;
+  gap: 50px;
+}
+
+#foot-info p{
+  margin: 0;
+}
+
+
+
+    
