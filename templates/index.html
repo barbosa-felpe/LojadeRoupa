@@ -10,8 +10,17 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Italianno&family=Luxurious+Script&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Xanh+Mono:ital@0;1&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"">
+
     <link rel=" stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <title>Loja de Roupa</title>
 </head>
 
@@ -95,20 +104,21 @@
     </div>
 
     <div id="destaques">
-        <h1 class="titulo-cont">Destaques</h1>
+        <h1 class="titulo-cont">Drop</h1>
 
 
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide"><img class="img-produto" src="../static/img/img-produtos/Produto sem foto.png"
+                        alt="produto">
+
+                    <div class="info-produto">
+
+                        <h1 class="nome-produto"><strong>Calça Mega Legal Muito</strong></h1>
+
+                        <h1 class="preco-produto">R$00,00</h1>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -116,19 +126,45 @@
     <div id="colecoes">
         <h1 class="titulo-cont">Coleções</h1>
 
+        <div class="colecao-wrap">
+            <div class="colecao-win">
+                <h1>VOID Collection</h1>
+
+                <img src="../static/img/colecao/colecao 1.png" alt="">
+            </div>
+            <div class="colecao-win">
+                <h1>Dust Collection</h1>
+
+                <img src="../static/img/colecao/colecao 2.png" alt="">
+            </div>
+            <div class="colecao-win">
+                <h1>NTRL Collection</h1>
+
+                <img src="../static/img/colecao/colecao 3.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="Lançamentos">
+        <h1 class="titulo-cont">Lançamentos</h1>
+
+
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img class="img-produto" src="../static/img/img-produtos/Produto sem foto.png" alt="produto">
 
+                    <div class="img-hover">
+                        <img class="img-produto 1" src="../static/img/img-produtos/Produto sem foto.png" alt="produto">
+                        <img class="img-produto 2" src="../static/img/img-produtos/Produto sem foto.png" alt="produto">
+                    </div>
+                    
                     <div class="info-produto">
 
-                        <h1 class="nome-produto">Calça Mega Legal Muito </h1>
+                        <h1 class="nome-produto"><strong>Calça Mega Legal Muito</strong></h1>
 
                         <h1 class="preco-produto">R$00,00</h1>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -630,7 +666,7 @@
         </div>
 
         <div id="foot-info">
-            <p>© 2025 Loja. Todos os direitos reservados.</p>
+            <p>© 2025 Peccato. Todos os direitos reservados.</p>
             <p>De segunda à quinta-feira, das 8h às 18h.</p>
             <p>CNPJ: 26.636.428/0001-19</p>
         </div>
