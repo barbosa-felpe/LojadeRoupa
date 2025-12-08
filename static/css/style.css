@@ -47,7 +47,7 @@
 }
 
 * {
-  font-family: "Aleo", serif;
+  font-family: "Averia Libre", serif;
 }
 
 body {
@@ -310,6 +310,10 @@ nav {
   height: 650px;
   width: 550px;
   
+}
+
+.colecao-win:hover{
+  cursor: pointer;
 }
 
 
