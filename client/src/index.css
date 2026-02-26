@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme{
+  --color-red: #830000;
+}
+
+*{
+  font-family: Averia Serif Libre;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.mySwiper {
+  --swiper-navigation-color: #a72c2c;
+  --swiper-pagination-color: #a72c2c;
+}
