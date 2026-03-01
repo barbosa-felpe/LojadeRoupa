@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 
@@ -8,7 +6,7 @@ import produtoSemFoto from '../asset/img-produtos/produtosemfoto.png'
 
 
 
-function SwiperDisplay({ title }) {
+export default function SwiperDisplay({ title }) {
 
 
     return (
@@ -47,4 +45,3 @@ function SwiperDisplay({ title }) {
     )
 }
 
-export default SwiperDisplay

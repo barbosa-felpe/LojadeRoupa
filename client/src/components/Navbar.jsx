@@ -14,7 +14,7 @@ function Navbar() {
         <>
             <nav className={styles.navbar} >
 
-                <img src={Logo} alt="Logo Peccato" />
+                <Link to={'/'}><img src={Logo} alt="Logo Peccato" /></Link>
 
                 <ul>
                     <Link to='/login'><li>Login</li></Link>

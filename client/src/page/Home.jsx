@@ -2,7 +2,7 @@ import styles from './Home.module.css'
 
 
 import Navbar from "../components/Navbar"
-import SwiperDisplay from '../components/Drop'
+import SwiperDisplay from '../components/SwiperDisplay'
 import Colecao from '../components/Colecao'
 import Carroussel from '../components/Carroussel'
 import Footer from '../components/Footer'
@@ -11,7 +11,7 @@ function Home() {
     return (
         <>
 
-            <Navbar />
+            
 
             <Carroussel />
 
@@ -25,7 +25,7 @@ function Home() {
                 <SwiperDisplay title="Lançamentos"/>
             </main>
 
-            <Footer />
+            
         </>
     )
 }
