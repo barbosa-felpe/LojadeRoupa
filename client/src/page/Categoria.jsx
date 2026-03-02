@@ -1,23 +1,47 @@
+import { useState } from 'react'
+
+
+import Slider from '../components/base/slider/slider'
 import { BsFillBasket2Fill } from "react-icons/bs";
 import produtoSemFoto from '../asset/img-produtos/produtosemfoto.png'
 
 
-function FilterSidebar(){
+function FilterSidebar() {
+
+    
 
     const sizes = ['PP', 'P', 'M', 'G', 'GG', 'XG']
+    const categories = [
+        'Casual', 'Esportiva', 'Social', 'Oversized', 'Streetwear',
+        'Basic', 'Cropped', 'Baby Look', 'Slim Fit', 'Muscle Fit'];
 
     return (
         <div className="flex flex-wrap flex-col w-200 p-5">
             <h1 className="font-bold">Filtro</h1>
-            <hr className="border-t border-gray-300 my-4"/>
+            <hr className="border-t border-gray-300 my-4" />
+
+            <h2 className="mb-3">Categoria</h2>
+
+            <div className="flex flex-wrap gap-1">
+                {categories.map((category) => (
+                    <button className="p-1 w-25 border-1 border-gray-300 rounded-2xl cursor-pointer transition-colors hover:bg-gray-300 ">{category}</button>
+                ))}
+            </div>
+
+            <hr className="border-t border-gray-300 my-4" />
 
             <h2 className="mb-3">Tamanho</h2>
 
             <div className="flex flex-wrap gap-1">
-            {sizes.map((size) => (
-                <button className="p-1 w-15 border-1 border-gray-300 rounded-2xl cursor-pointer transition-colors hover:bg-gray-300">{size}</button>
-            ))}
+                {sizes.map((size) => (
+                    <button className="p-1 w-15 border-1 border-gray-300 rounded-2xl cursor-pointer transition-colors hover:bg-gray-300 ">{size}</button>
+                ))}
             </div>
+
+            <hr className="border-t border-gray-300 my-4" />
+            
+            
+            
         </div>
     )
 }
@@ -25,7 +49,7 @@ function FilterSidebar(){
 
 function ListProduct() {
 
-    const produtos = ['camisinha neon', 'camisinha chocolate', 'camisinha de banana', 'camisinha de morango', 'camisinha de whey','camisinha neon', 'camisinha chocolate', 'camisinha de banana', 'camisinha de morango', 'camisinha de whey']
+    const produtos = ['camisinha neon', 'camisinha chocolate', 'camisinha de banana', 'camisinha de morango', 'camisinha de whey', 'camisinha neon', 'camisinha chocolate', 'camisinha de banana', 'camisinha de morango', 'camisinha de whey']
 
     return (
         <div className="flex gap-10 flex-wrap  p-5" >
