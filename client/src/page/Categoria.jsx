@@ -1,14 +1,15 @@
-import { useState } from 'react'
 
 
-import Slider from '../components/base/slider/slider'
+
 import { BsFillBasket2Fill } from "react-icons/bs";
 import produtoSemFoto from '../asset/img-produtos/produtosemfoto.png'
+import { useLocation } from "react-router-dom";
+import PageHeader from "../components/PageHeader";
 
 
 function FilterSidebar() {
 
-    
+
 
     const sizes = ['PP', 'P', 'M', 'G', 'GG', 'XG']
     const categories = [
@@ -39,9 +40,9 @@ function FilterSidebar() {
             </div>
 
             <hr className="border-t border-gray-300 my-4" />
-            
-            
-            
+
+
+
         </div>
     )
 }
@@ -70,12 +71,30 @@ function ListProduct() {
     )
 }
 
+
+
 export default function Categoria() {
+
+    const location = useLocation()
+
+    const segmentos = location.pathname.split('/').filter(Boolean);
+
+    const titulo = segmentos[segmentos.length - 1]
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, l => l.toUpperCase());
+
     return (
-        <div className="flex justify-center pt-10 pb-10 pl-5 ">
+        <div className="flex flex-col justify-center pt-10 pb-10 pl-5 ">
+
+            
+            <PageHeader />
+        <div className="flex">
+
             <FilterSidebar />
 
             <ListProduct />
+
+        </div>
         </div>
     )
 }
