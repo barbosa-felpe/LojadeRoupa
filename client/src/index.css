@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
-@theme{
+@theme {
   --color-red: #830000;
 }
 
-*{
-  font-family: Averia Serif Libre;
+* {
+  font-family: "Bricolage Grotesque";
+
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   min-height: 100vh;

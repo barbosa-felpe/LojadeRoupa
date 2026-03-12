@@ -111,7 +111,7 @@ function ListProduct() {
                         <img src={produtoSemFoto} alt='produto' className='w-full' />
                     </div>
 
-                    <h1 className='text-xl pt-2'>{produto}</h1>
+                    <h1 className='text-xl pt-2 '>{produto}</h1>
 
                     <h1 className='text-2xl text-green-600 tex'>R$300</h1>
 

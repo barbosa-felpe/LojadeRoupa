@@ -20,7 +20,7 @@ export default function PageHeader() {
 
     return (
         <div className="ml-3 mb-5">
-            <h1 className="text-4xl mb-1 mt-5 ">{pagina ? pagina.titulo : ''}</h1>
+            <h1 className="text-4xl mb-1 mt-5 font-bold ">{pagina ? pagina.titulo : ''}</h1>
             <p>{`${breadcrumb[1]} > ${breadcrumb[2]}`}</p>
         </div>
     )
