@@ -18,8 +18,8 @@ function Navbar() {
 
                 <ul>
                     <Link to='/login'><li>Login</li></Link>
-                    <Link to='/'><li>Crie uma Conta</li></Link>
-                    <Link to='/'><li>< IoCartOutline /></li></Link>
+                    <Link to='/register'><li>Crie uma Conta</li></Link>
+                    <Link to='/cart'><li>< IoCartOutline /></li></Link>
                 </ul>
             </nav>
 

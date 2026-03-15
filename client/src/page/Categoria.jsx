@@ -6,6 +6,7 @@ import produtoSemFoto from '../asset/img-produtos/produtosemfoto.png'
 import { useLocation } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import { useState } from "react";
+import Product from "../components/Product";
 
 
 function FilterSidebar() {
@@ -104,19 +105,9 @@ function ListProduct() {
     const produtos = ['camisinha neon', 'camisinha chocolate', 'camisinha de banana', 'camisinha de morango', 'camisinha de whey', 'camisinha neon', 'camisinha chocolate', 'camisinha de banana', 'camisinha de morango', 'camisinha de whey']
 
     return (
-        <div className="flex gap-10 flex-wrap  p-5" >
+        <div className="flex justify-between px-5 flex-wrap " >
             {produtos.map((produto) => (
-                <div className='flex flex-col justify-end items-center p-5 bg-slate-100 w-80 h-100 rounded-3xl'>
-                    <div className='overflow-hidden rounded-2xl'>
-                        <img src={produtoSemFoto} alt='produto' className='w-full' />
-                    </div>
-
-                    <h1 className='text-xl pt-2 '>{produto}</h1>
-
-                    <h1 className='text-2xl text-green-600 tex'>R$300</h1>
-
-                    <button className=' flex align-center bg-(--color-red) text-white p-2 rounded-xl m-2 cursor-pointer transition-transform hover:scale-105 active:scale-100 bg-[#a72c2c]'> <BsFillBasket2Fill className='h-4/5 w-auto mr-1' /> Adicionar ao carrinho</button>
-                </div>
+                <Product name={produto}/>
             ))}
         </div>
     )
