@@ -1,4 +1,5 @@
 import { Instagram, Youtube, MessageCircle, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -15,11 +16,17 @@ export default function Footer() {
             </h2>
             <hr className="border-white/20 mb-4" />
             <ul className="space-y-2">
-              {["Quem Somos", "Perguntas Frequentes", "Seja um Franqueado", "Nossas Lojas", "Trabalhe Conosco"].map((item) => (
-                <li key={item}>
-                  <a href="" className="text-sm hover:text-white transition-colors duration-200">
-                    {item}
-                  </a>
+              {[
+                { label: "Quem Somos", to: "/quem-somos" },
+                { label: "Perguntas Frequentes", to: "/perguntas-frequentes" },
+                { label: "Seja um Franqueado", to: "/seja-um-franqueado" },
+                { label: "Nossas Lojas", to: "/nossas-lojas" },
+                { label: "Trabalhe Conosco", to: "/trabalhe-conosco" },
+              ].map(({ label, to }) => (
+                <li key={label}>
+                  <Link to={to} className="text-sm hover:text-white transition-colors duration-200">
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -32,11 +39,14 @@ export default function Footer() {
             </h2>
             <hr className="border-white/20 mb-4" />
             <ul className="space-y-2">
-              {["Minha Conta", "Meus Pedidos"].map((item) => (
-                <li key={item}>
-                  <a href="" className="text-sm hover:text-white transition-colors duration-200">
-                    {item}
-                  </a>
+              {[
+                { label: "Minha Conta", to: "/minha-conta" },
+                { label: "Meus Pedidos", to: "/meus-pedidos" },
+              ].map(({ label, to }) => (
+                <li key={label}>
+                  <Link to={to} className="text-sm hover:text-white transition-colors duration-200">
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -49,11 +59,17 @@ export default function Footer() {
             </h2>
             <hr className="border-white/20 mb-4" />
             <ul className="space-y-2">
-              {["Privacidade", "Termos de Uso", "Trocas e Devolução", "Entrega e Frete", "Pagamento"].map((item) => (
-                <li key={item}>
-                  <a href="" className="text-sm hover:text-white transition-colors duration-200">
-                    {item}
-                  </a>
+              {[
+                { label: "Privacidade", to: "/privacidade" },
+                { label: "Termos de Uso", to: "/termos-de-uso" },
+                { label: "Trocas e Devolução", to: "/trocas-e-devolucao" },
+                { label: "Entrega e Frete", to: "/entrega-e-frete" },
+                { label: "Pagamento", to: "/pagamento" },
+              ].map(({ label, to }) => (
+                <li key={label}>
+                  <Link to={to} className="text-sm hover:text-white transition-colors duration-200">
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>
